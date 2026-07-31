@@ -1,14 +1,17 @@
 import React from 'react'
-import Footer from './component/Footer'
-import Navbar from './component/Navbar'
+import { Form } from 'react-router-dom'
+import Footer from '../component/Footer'
+import Navbar from '../component/Navbar'
 
-const contact = () => {
+const Contact = () => {
   return (
     <>
         <Navbar/>
+        <h1>Contact</h1>
+        <Form/>
         <Footer/>  
     </>
   )
 }
 
-export default contact
+export default Contact

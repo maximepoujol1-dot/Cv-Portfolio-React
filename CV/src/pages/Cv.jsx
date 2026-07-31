@@ -1,14 +1,17 @@
 import React from 'react'
-import Footer from './component/Footer'
-import Navbar from './component/Navbar'
+import Card from '../component/Card'
+import Footer from '../component/Footer'
+import Navbar from '../component/Navbar'
 
-const cv = () => {
+const Cv = () => {
   return (
     <>
         <Navbar/>
+        <h1>Cv</h1>
+        <Card/>
         <Footer/>  
     </>
   )
 }
 
-export default cv
+export default Cv

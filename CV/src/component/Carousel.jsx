@@ -1,6 +1,6 @@
 import React from 'react'
 
-const carousel = () => {
+const Carousel = () => {
   return (
     <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">
@@ -39,8 +39,8 @@ const carousel = () => {
             <a href="#slide1" className="btn btn-circle">❯</a>
             </div>
         </div>
-        </div>
+    </div>
   )
 }
 
-export default carousel
+export default Carousel

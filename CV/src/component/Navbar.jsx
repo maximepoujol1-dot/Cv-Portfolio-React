@@ -1,5 +1,6 @@
 import React from 'react'
-
+import Theme from './Theme'
+import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm">
@@ -13,12 +14,13 @@ const Navbar = () => {
         </div>
         <div className="flex-none">
             <ul className="menu menu-horizontal px-1">
-            <li><a>Homepage</a></li>
-            <li><a>Portfolio</a></li>
-            <li><a>Cv</a></li>
-            <li><a>Contact</a></li>
+            <li><Link to="/"> Homepage  </Link></li>
+            <li><Link to="/portfolio"> Portfolio </Link></li>
+            <li><Link to="/cv"> Cv        </Link></li>
+            <li><Link to="/contact"> Contact   </Link></li>
             </ul>
         </div>
+        <Theme/>
     </div>
   )
 }
