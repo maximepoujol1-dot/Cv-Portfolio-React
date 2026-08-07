@@ -1,22 +1,31 @@
 import React from 'react'
 import Modal from './Modal'
-const Card = ({taille,message, title}) => {
-  return (
+const Card = ({taille,contenu, title,modal}) => {
+  if (modal) {
+    return (
     <div className={"card "+ taille}>
-        <figure>
-            <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes" />
-        </figure>
         <div className="card-body">
             <h2 className="card-title">{title}</h2>
-            <p>{message}</p>
+            <ul>{contenu}</ul>
             <div className="card-actions justify-end">
             <Modal/>
             </div>
         </div>
     </div>
   )
+  } else {
+    return (
+    <div className={"card "+ taille}>
+        <div className="card-body">
+            <h2 className="card-title">{title}</h2>
+            <div>{contenu}</div>
+            <div className="card-actions justify-end">
+            </div>
+        </div>
+    </div>
+  )
+  }
+  
 }
 
 export default Card
