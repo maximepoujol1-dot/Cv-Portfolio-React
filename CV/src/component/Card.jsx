@@ -14,7 +14,7 @@ const Card = ({taille,contenu, title,modal}) => {
     </div>
   )
   } else {
-    return (
+    return (<>
     <div className={"card "+ taille}>
         <div className="card-body">
             <h2 className="card-title">{title}</h2>
@@ -23,6 +23,9 @@ const Card = ({taille,contenu, title,modal}) => {
             </div>
         </div>
     </div>
+    <br/>
+    </>
+    
   )
   }
   

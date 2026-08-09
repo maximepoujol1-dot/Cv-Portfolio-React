@@ -1,7 +1,7 @@
 import Homepage from './pages/Homepage'
-import Cv from './pages/cv'
-import Contact from './pages/contact'
-import Portfolio from './pages/portfolio'
+import Cv from './pages/Cv'
+import Contact from './pages/Contact'
+import Portfolio from './pages/Portfolio'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
