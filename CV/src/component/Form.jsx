@@ -1,18 +1,22 @@
 import React from 'react'
 
-const Form = ({titre, style, categorie}) => {
+const Form = ({style, styleCategorie, categorie}) => {
   return (
+    <div className='flex items-center justify-center'>
     <fieldset className={style}>
-        <h1 className="fieldset-legend">{titre}</h1>
+            {categorie.map((elt) => (
+              
+            <div key={elt.id} className="">
 
-        {categorie.map((elt) => (<div key={elt.id} className="">
-
-          <label className="label">{elt.name}</label>
-          <input type="text" className="input" placeholder="My awesome page" /> 
-        </div>))}
-        
-        
-    </fieldset>
+              <label className="label">{elt.inside.name}</label>
+              <br/>
+              <textarea type="text" className={elt.inside.cateStyle} placeholder="My awesome page" /> 
+            </div>))}
+            <button className="btn btn-neutral mt-4">Envoyer</button>
+            
+        </fieldset>
+    </div>
+    
   )
 }
 
