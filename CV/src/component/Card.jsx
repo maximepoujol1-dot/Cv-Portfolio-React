@@ -18,7 +18,7 @@ const Card = ({taille,contenu, title,modal}) => {
     <div className={"card "+ taille}>
         <div className="card-body">
             <h2 className="card-title">{title}</h2>
-            <div>{contenu}</div>
+            <ul>{contenu}</ul>
             <div className="card-actions justify-end">
             </div>
         </div>

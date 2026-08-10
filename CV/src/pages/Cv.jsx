@@ -5,6 +5,8 @@ import Navbar from '../component/Navbar'
 import Divider from '../component/divider'
 import Hero from '../component/Hero'
 import Modal from '../component/Modal'
+import { motion } from 'motion/react'
+
 
 const hard_skills = [
   {id: 1, name: "golang", image: "/favicon.svg"},
@@ -62,7 +64,9 @@ const Cv = () => {
     <>
         <Navbar/>
         <br />
-        <div >
+        <motion.div initial={{opacity: 0, x: 500}} 
+                          animate={{opacity: 1, x: 0}} 
+                          transition={{duration: 0.8,ease: "easeIn"}}>
             <Card  
               taille= "w-full bg-base-100 card-xl shadow-xs" 
               contenu={<p>Je suis Maxime Collette Poujol, étudiant en informatique et développeur junior. Curieux et motivé, j’aime apprendre de nouvelles technologies, développer des projets et résoudre des problèmes. Je souhaite aujourd’hui mettre mes compétences en pratique et continuer à progresser dans le domaine de l’informatique.</p>} 
@@ -89,7 +93,7 @@ const Cv = () => {
               title="Hobbie" 
               modal={false}
             />
-        </div>
+        </motion.div>
         <Footer/>  
     </>
   )

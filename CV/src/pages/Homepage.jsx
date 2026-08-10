@@ -3,11 +3,13 @@ import Footer from '../component/Footer'
 import Navbar from '../component/Navbar'
 import Hero from '../component/Hero'
 import Card from '../component/Card'
+import moi from '../assets/moi.png'
 import { Link } from 'react-router-dom'
+import { motion } from 'motion/react'
 
 const presentation = <div className="hero-content flex-col lg:flex-row">
           <img
-            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+            src={moi}
             className="max-w-sm rounded-lg shadow-2xl"
           />
           <div>
@@ -28,14 +30,18 @@ const Homepage = () => {
   return (
     <>
       <Navbar/>
-      <div className="hero bg-base-500 min-h-screen">
-        <Card taille= "bg-base-100 w-1/2 h-3/4 shadow-xl" 
+      <motion.div initial={{opacity: 0, x: 500}} 
+                  animate={{opacity: 1, x: 0}} 
+                  transition={{duration: 0.8, ease: "easeIn"}}
+                  className="hero bg-base-500 min-h-screen">
+        <Card 
+              taille= "bg-base-100 w-1/2 h-3/4 shadow-xl" 
               contenu={presentation} 
               title="" 
               modal={false}>
 
         </Card>
-      </div>
+      </motion.div>
       <Footer/>    
     </>
   )
