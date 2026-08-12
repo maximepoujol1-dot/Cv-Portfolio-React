@@ -38,7 +38,11 @@ const Homepage = () => {
               taille= "bg-base-100 w-1/2 h-3/4 shadow-xl" 
               contenu={presentation} 
               title="" 
+              theScale = {1.2}
+              theY = {-2}
               modal={false}>
+              
+
 
         </Card>
       </motion.div>
