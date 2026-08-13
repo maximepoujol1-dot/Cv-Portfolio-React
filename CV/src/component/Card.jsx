@@ -2,7 +2,7 @@ import React from 'react'
 import Modal from './Modal'
 import { motion } from 'motion/react'
 
-const Card = ({taille,contenu, title,modal, theScale = 1, theY= 0}) => {
+const Card = ({taille,contenu, title,modal = false, theScale = 1, theY= 0}) => {
   if (modal) {
     return (
     <motion.div whileHover={{scale: theScale, y: theY}} className={"card "+ taille}>

@@ -5,29 +5,8 @@ import Navbar from '../component/Navbar'
 import Divider from '../component/divider'
 import Hero from '../component/Hero'
 import Modal from '../component/Modal'
+import { hard_skills, soft_skills, Experience } from '../data/datapages'
 import { motion } from 'motion/react'
-
-
-const hard_skills = [
-  {id: 1, name: "golang", image: "/favicon.svg"},
-  {id: 2, name:"javascript", image: "/favicon.svg"},
-  {id: 3, name:"react", image: "/favicon.svg"},
-  {id: 4, name: "C", image: "/favicon.svg"},
-  {id: 5, name:"C++", image: "/favicon.svg"},
-  {id: 6, name:"SQL", image: "/favicon.svg"}
-];
-
-const soft_skills = [
-  {id: 1, name: "code", image: "/favicon.svg"},
-  {id: 2, name: "lire", image: "/favicon.svg"},
-  {id: 3, name: "ecrire", image: "/favicon.svg"}
-];
-
-const Experience = [
-  {id: 1, name: "code", image: "/favicon.svg"},
-  {id: 2, name: "lire", image: "/favicon.svg"},
-  {id: 3, name: "ecrire", image: "/favicon.svg"}
-]   
 
 const hobbie = [
   <div>
