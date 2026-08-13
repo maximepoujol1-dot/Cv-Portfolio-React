@@ -3,18 +3,8 @@ import Card from '../component/Card'
 import Carousel from '../component/Carousel'
 import Footer from '../component/Footer'
 import Navbar from '../component/Navbar'
+import Projet from '../component/Projet'
 import { motion } from 'motion/react'
-
-let NoFilter = true
-let filterRecent = false
-let filterAncient = false
-let filterAlphabetiqueHaut = false
-let filterAlphabetiqueBas = false
-
-let filterType1 = true
-let filterType2 = false
-let filterType3 = false
-let filterType4 = false
 
 const projetsList = [
   {
@@ -22,6 +12,7 @@ const projetsList = [
     title: "Projet 1",
     contenu: <p>J'ai fait un projet cool</p>,
     taille: "flex w-1/3 h-2/3 bg-base-100 card shadow-xl",
+    year: "2025",
     modal: true,
   },
   {
@@ -29,13 +20,19 @@ const projetsList = [
     title: "Projet 2",
     contenu: <p>J'ai fait un projet cool</p>,
     taille: "flex w-1/3 h-2/3 bg-base-100 card shadow-xl",
+    year: "2025",
     modal: true,
-  },
+  }
+];
+
+const projetsList2 = [
+  
   {
     id: 3,
     title: "Projet 3",
     contenu: <p>J'ai fait un projet cool</p>,
     taille: "flex w-1/3 h-2/3 bg-base-100 card shadow-xl",
+    year: "2026",
     modal: true,
   },
   {
@@ -43,13 +40,19 @@ const projetsList = [
     title: "Projet 4",
     contenu: <p>J'ai fait un projet cool</p>,
     taille: "flex w-1/3 h-2/3 bg-base-100 card shadow-xl",
+    year: "2025",
     modal: true,
-  },
-  {
+  }
+];
+
+
+const projetsList3 = [
+    {
     id: 5,
     title: "Projet 5",
     contenu: <p>J'ai fait un projet cool</p>,
     taille: "flex w-1/3 h-2/3 bg-base-100 card shadow-xl",
+    year: "2026",
     modal: true,
   },
   {
@@ -57,35 +60,13 @@ const projetsList = [
     title: "Projet 6",
     contenu: <p>J'ai fait un projet cool</p>,
     taille: "flex w-1/3 h-2/3 bg-base-100 card shadow-xl",
-    modal: true,
-  },
-  {
-    id: 7,
-    title: "Projet 7",
-    contenu: <p>J'ai fait un projet cool</p>,
-    taille: "flex w-1/3 h-2/3 bg-base-100 card shadow-xl",
-    modal: true,
-  },
-  {
-    id: 8,
-    title: "Projet 8",
-    contenu: <p>J'ai fait un projet cool</p>,
-    taille: "flex w-1/3 h-2/3 bg-base-100 card shadow-xl",
+    year: "2025",
     modal: true,
   },
 ];
 
-const projects = projetsList.map((elt) => (
-  <div key={elt.id} className='flex flex-wrap gap-4'>
-    <Card
-      taille={elt.taille}
-      contenu={elt.contenu}
-      title={elt.title}
-      modal={elt.modal}
-    />
-    <br />
-  </div>
-))
+
+
 
 const Portfolio = () => {
   return (
@@ -102,8 +83,8 @@ const Portfolio = () => {
                     />
         <br/>    
         <div>
-          <Card taille= "flex items-center w-full bg-base-100 card shadow-xl" 
-                    contenu={projects}
+          <Card taille= "w-full bg-base-100 card shadow-xl" 
+                    contenu={<Projet projet1={projetsList} projet2={projetsList2} projet3={projetsList3}/>}
                     title="Mes Projets" 
                     modal={false}
                     />
