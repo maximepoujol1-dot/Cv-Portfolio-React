@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from './Card'
 import Button from './Button'
-import { motion } from 'motion/react'
 import { useState } from 'react';
 
 
@@ -11,7 +10,7 @@ const TriA = ({theProjet}) => {
 
   return (
     theProjet.map((elt) => (
-        <motion.div
+        <div
           initial={{ opacity: 0, x: 500 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: 'easeIn' }}
@@ -23,9 +22,10 @@ const TriA = ({theProjet}) => {
             contenu={elt.contenu}
             title={elt.title}
             modal={elt.modal}
+            contenuModal={elt.contenuModal}
           />
           <br />
-        </motion.div>
+        </div>
       ))
   )
 }
@@ -36,7 +36,7 @@ const TriZ = ({ theProjet }) => {
 
   return (
      theProjet.map((elt) => (
-        <motion.div
+        <div
           initial={{ opacity: 0, x: 500 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: 'easeIn' }}
@@ -48,9 +48,10 @@ const TriZ = ({ theProjet }) => {
             contenu={elt.contenu}
             title={elt.title}
             modal={elt.modal}
+            contenuModal={elt.contenuModal}
           />
           <br />
-        </motion.div>
+        </div>
       ))
   )
 }
@@ -61,7 +62,7 @@ const TriTime = ({theProjet}) => {
 
   return (
      theProjet.map((elt) => (
-        <motion.div
+        <div
           initial={{ opacity: 0, x: 500 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: 'easeIn' }}
@@ -73,10 +74,11 @@ const TriTime = ({theProjet}) => {
             contenu={elt.contenu}
             title={elt.title}
             modal={elt.modal}
+            contenuModal={elt.contenuModal}
           />
           <p>Time</p>
           <br />
-        </motion.div>
+        </div>
       ))
   )
 }

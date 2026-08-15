@@ -11,7 +11,7 @@ const Navbar = () => {
             </div>
         </div>
         <div className="flex-1">
-            <a className="btn btn-ghost text-xl"> MAXIME</a>
+            <a className="btn btn-ghost text-xl"> MAXIME COLLETTE POUJOL</a>
         </div>
         <div className="flex-none">
             <ul className="menu menu-horizontal px-1">

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+    <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10"> 
         <nav>
             <h6 className="footer-title">Liens</h6>
             <a href="https://github.com/maximepoujol1-dot" className="link link-hover">Github</a>

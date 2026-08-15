@@ -1,3 +1,6 @@
+import img1 from "../assets/ck3_wallpaper.jpg";
+
+
 export const hard_skills = [
   {id: 1, name: "golang", image: "/favicon.svg"},
   {id: 2, name:"javascript", image: "/favicon.svg"},
@@ -19,6 +22,11 @@ export const Experience = [
   {id: 3, name: "ecrire", image: "/favicon.svg"}
 ]   
 
+export const formation = [
+  {id: 1, name: "code", image: "/favicon.svg"},
+  {id: 2, name: "lire", image: "/favicon.svg"},
+  {id: 3, name: "ecrire", image: "/favicon.svg"}
+]   
 
 export const projetsList = [
   {
@@ -28,6 +36,12 @@ export const projetsList = [
     taille: "flex w-1/3 h-2/3 bg-base-100 card shadow-xl",
     year: "2025",
     modal: true,
+    contenuModal: <ul className="menu menu-vertical px-1">
+            <li><img src= {img1} className="w-full" /></li>
+            <li><img src= {img1} className="w-full" /></li>
+            <li><img src= {img1} className="w-full" /></li>
+            <li><img src= {img1} className="w-full" /></li>
+            </ul>
   },
   {
     id: 2,
@@ -36,6 +50,12 @@ export const projetsList = [
     taille: "flex w-1/3 h-2/3 bg-base-100 card shadow-xl",
     year: "2025",
     modal: true,
+    contenuModal: <ul className="menu menu-vertical px-1">
+            <li><img src= {img1} className="w-full" /></li>
+            <li><img src= {img1} className="w-full" /></li>
+            <li><img src= {img1} className="w-full" /></li>
+            <li><img src= {img1} className="w-full" /></li>
+            </ul>
   }
 ];
 

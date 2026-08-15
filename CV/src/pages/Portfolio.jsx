@@ -9,31 +9,28 @@ import { motion } from 'motion/react'
 
 const Portfolio = () => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen bg-base-200">
       <Navbar/>
       <br/>
-      <motion.div initial={{opacity: 0, x: 500}} 
-                  animate={{opacity: 1, x: 0}} 
-                  transition={{duration: 0.8, ease: "easeIn"}}>
-        <Card taille= "flex items-center w-full bg-base-100 card shadow-xl" 
-                    contenu={<Carousel/>}
-                    title="Mes Projets" 
-                    modal={false}
-                    />
-        <br/>    
-        <div>
+      <main className="flex-1">
+        <div initial={{opacity: 0, x: 500}} 
+                    animate={{opacity: 1, x: 0}} 
+                    transition={{duration: 0.8, ease: "easeIn"}}>
+          <Carousel/>
+          <br/>    
           <Card taille= "w-full bg-base-100 card shadow-xl" 
-                    contenu={<Projet projet1={projetsList} projet2={projetsList2} projet3={projetsList3}/>}
-                    title="Mes Projets" 
-                    modal={false}
-                    />
-                    
-        </div>        
-        
-      </motion.div>
+                      contenu={<Projet projet1={projetsList} projet2={projetsList2} projet3={projetsList3}/>}
+                      title="Mes Projets" 
+                      modal={false}
+                      />
+                      
+                
+          
+        </div>
+      </main>
       <br/>
       <Footer/>    
-    </>
+    </div>
   )
 }
 

@@ -28,9 +28,10 @@ const presentation = <div className="hero-content flex-col lg:flex-row">
 
 const Homepage = () => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen bg-base-200">
       <Navbar/>
-      <motion.div initial={{opacity: 0, x: 500}} 
+      <main className="flex-1">
+      <div initial={{opacity: 0, x: 500}} 
                   animate={{opacity: 1, x: 0}} 
                   transition={{duration: 0.8, ease: "easeIn"}}
                   className="hero bg-base-500 min-h-screen">
@@ -45,9 +46,10 @@ const Homepage = () => {
 
 
         </Card>
-      </motion.div>
+      </div>
+      </main>
       <Footer/>    
-    </>
+    </div>
   )
 }
 

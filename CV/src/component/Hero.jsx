@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Hero = ({inside}) => {
+const Hero = ({inside, sens = false}) => {
   return (
     <div className="">
         {inside.map((elt) => (
-        <div key={elt.id} className="hero-content flex-col lg:flex-row">
+        <div key={elt.id} className= { sens ? "hero-content flex-col lg:flex-row" : "hero-content flex-col lg:flex-row-reverse" } >
             <img
             src={elt.image}
             className="max-w-sm rounded-lg shadow-2xl"
