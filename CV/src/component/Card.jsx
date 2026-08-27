@@ -21,8 +21,7 @@ const Card = ({taille,contenu, title,modal = false, theScale = 1, theY= 0, conte
         <div className="card-body">
             <h2 className="card-title">{title}</h2>
             <ul>{contenu}</ul>
-            <div className="card-actions justify-end">
-            </div>
+            <div className="card-actions justify-end"/>
         </div>
     </motion.div>
     <br/>

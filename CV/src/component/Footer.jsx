@@ -20,10 +20,10 @@ const Footer = () => {
         </nav>
         <nav>
             <h6 className="footer-title">Navigation</h6>
-            <a href="" className="link link-hover"><Link to="/"> Accueuil</Link></a>
-            <a href="" className="link link-hover"><Link to="/portfolio"> Portfolio</Link></a>
-            <a href="" className="link link-hover"><Link to="/cv"> Cv </Link></a>
-            <a href="" className="link link-hover"><Link to="/contact"> Contact</Link></a>
+            <Link to="/" className="link link-hover">Accueil</Link>
+            <Link to="/portfolio" className="link link-hover">Portfolio</Link>
+            <Link to="/cv" className="link link-hover">Cv</Link>
+            <Link to="/contact" className="link link-hover">Contact</Link>
         </nav>
         </footer>
   )

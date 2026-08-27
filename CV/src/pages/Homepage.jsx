@@ -18,9 +18,9 @@ const presentation = <div className="hero-content flex-col lg:flex-row">
               Je suis Maxime Collette Poujol, étudiant en informatique et développeur junior. Curieux et motivé, j’aime apprendre de nouvelles technologies, développer des projets et résoudre des problèmes. Je souhaite aujourd’hui mettre mes compétences en pratique et continuer à progresser dans le domaine de l’informatique.
             </p>
             <div  className= "flex flex-wrap gap-4">
-              <button className="btn btn-primary"><Link to="/portfolio"> Mes projets </Link></button>
-              <button className="btn btn-primary"><Link to="/cv"> me connaitre </Link></button>
-              <button className="btn btn-primary"><Link to="/contact"> me contacter</Link></button>
+              <Link to="/portfolio" className="btn btn-primary">Mes projets</Link>
+              <Link to="/cv" className="btn btn-primary">Me connaitre</Link>
+              <Link to="/contact" className="btn btn-primary">Me contacter</Link>
             </div>
             
           </div>

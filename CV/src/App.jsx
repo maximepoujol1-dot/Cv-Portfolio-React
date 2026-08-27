@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
   return (
-    <>
     <div data-theme={maintheme}>
       <Router>
         <Routes>
@@ -18,7 +17,6 @@ function App() {
         </Routes>
       </Router>
     </div>
-    </>
   )
 }
 
