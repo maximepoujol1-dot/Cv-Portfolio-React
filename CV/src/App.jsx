@@ -3,7 +3,6 @@ import './app.css'
 import Cv from './pages/Cv'
 import Contact from './pages/Contact'
 import Portfolio from './pages/Portfolio'
-import { mainTheme } from './data/dataComponents'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
