@@ -29,12 +29,12 @@ const hobbie = [
 const skills = [ <Card   
                     taille= "w-full bg-base-100 card shadow-xl" 
                     contenu={<Divider inside={hard_skills} horizontale={true}/>}
-                    title="- Hard Skills :" 
+                    title="Hard Skills :" 
                     modal={false}
                   />, <Card  
                     taille= "w-full bg-base-100 card shadow-xl" 
                     contenu={<Divider inside={soft_skills} horizontale={true}/>}
-                    title="- Soft Skills :" 
+                    title="Soft Skills :" 
                     modal={false}
                   /> 
                 ]
@@ -59,14 +59,14 @@ const Cv = () => {
               <Card  
                 taille= "w-full bg-base-100 card-xl shadow-xs" 
                 contenu={<Hero inside={formation} sens={true}/>} 
-                title="Experience et formation" 
+                title="Formation" 
                 modal={false}
               />
               <br />
               <Card  
                 taille= "w-full bg-base-100 card-xl shadow-xs" 
                 contenu={<Hero inside={Experience}/>} 
-                title="Experience et formation" 
+                title="Experience" 
                 modal={false}
               />
               <br />

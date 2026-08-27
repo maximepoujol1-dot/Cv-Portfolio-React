@@ -17,15 +17,12 @@ export const soft_skills = [
 ];
 
 export const Experience = [
-  {id: 1, name: "code", image: "/favicon.svg"},
-  {id: 2, name: "lire", image: "/favicon.svg"},
-  {id: 3, name: "ecrire", image: "/favicon.svg"}
+  {id: 1, name: "A venir", image: "/favicon.svg", message: "Je suis actuellement un devellopeur junior qui cherche une alternace ou un stage. Mon but est d'approfondir mes compétence dans les plusieurs domaine ainsi que d'imergé dans le contexte professionel du travail au sein d'une entreprise. J'ai hate de pouvoir travaillé avec vous !", date: ""},
 ]   
 
 export const formation = [
-  {id: 1, name: "code", image: "/favicon.svg"},
-  {id: 2, name: "lire", image: "/favicon.svg"},
-  {id: 3, name: "ecrire", image: "/favicon.svg"}
+  {id: 1, name: "Lycée", image: "/favicon.svg", message: "J'ai suivis un Bacaloreat mathématique et NSI (Numérique et Science Informatique) qui m'a permis de très tot devellopé ma logique algorithmique, des connaissance de base en reseaux, des base en langage de base de donné et la rigueur d'application", date: "2022 - 2025"},
+  {id: 2, name: "Ynov", image: "/favicon.svg", message: "Je suis Maxime Collette Poujol, étudiant en informatique et développeur junior. Curieux et motivé, j’aime apprendre de nouvelles technologies, développer des projets et résoudre des problèmes. Je souhaite aujourd’hui mettre mes compétences en pratique et continuer à progresser dans le domaine de l’informatique.", date: "2025 - aujourd'hui"},
 ]   
 
 export const projetsList = [

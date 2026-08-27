@@ -20,7 +20,7 @@ const Portfolio = () => {
           <br/>    
           <Card taille= "w-full bg-base-100 card shadow-xl" 
                       contenu={<Projet projet1={projetsList} projet2={projetsList2} projet3={projetsList3}/>}
-                      title="Mes Projets" 
+                      title="" 
                       modal={false}
                       />
                       

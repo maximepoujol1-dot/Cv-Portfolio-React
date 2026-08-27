@@ -119,12 +119,16 @@ const Projet = ({projet1, projet2,projet3}) => {
   return ( 
 
     <>
-
-    <Button taille={"btn-primary"} message={"type1"} onClick={() => { setTypeProjet(projet1); }} />
+    <h1>Projet</h1>
+    <br/>
+    <div className='flex gap-4'>
+      <Button taille={"btn-primary"} message={"type1"} onClick={() => { setTypeProjet(projet1); }} />
     
-    <Button taille={"btn-primary"} message={"type2"} onClick={() => { setTypeProjet(projet2); }} />
+      <Button taille={"btn-primary"} message={"type2"} onClick={() => { setTypeProjet(projet2); }} />
+      
+      <Button taille={"btn-primary"} message={"type3"} onClick={() => { setTypeProjet(projet3); }} />
+    </div>
     
-    <Button taille={"btn-primary"} message={"type3"} onClick={() => { setTypeProjet(projet3); }} />
 
     <br/>
 
@@ -132,11 +136,14 @@ const Projet = ({projet1, projet2,projet3}) => {
 
     <br/>  
 
-    <Button taille={"btn-primary"} message={"triA"} onClick={() => {  setTri("A") }} />
+    <div className='flex gap-4'>
+      <Button taille={"btn-primary"} message={"triA"} onClick={() => {  setTri("A") }} />
     
-    <Button taille={"btn-primary"} message={"typeZ"} onClick={() => {  setTri("Z") }} />
+      <Button taille={"btn-primary"} message={"typeZ"} onClick={() => {  setTri("Z") }} />
+      
+      <Button taille={"btn-primary"} message={"typeTime"} onClick={() => {  setTri("Time") }} />
+    </div>
     
-    <Button taille={"btn-primary"} message={"typeTime"} onClick={() => {  setTri("Time") }} />
 
     <br/> 
       

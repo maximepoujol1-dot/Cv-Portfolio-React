@@ -10,10 +10,13 @@ const Hero = ({inside, sens = false}) => {
             className="max-w-sm rounded-lg shadow-2xl"
             />
             <div>
-            <h1 className="text-5xl font-bold">{elt.name}</h1>
+                <div className='flex justify-between items-center'>
+                    <h1 className="text-5xl font-bold">{elt.name}</h1>
+                    {elt.date ? <div className="badge badge-xl">{elt.date}</div> : null}
+                </div>
+            
             <p className="py-6">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                quasi. In deleniti eaque aut repudiandae et a id nisi.
+              {elt.message}
             </p>
             </div>
         </div>))}

@@ -19,7 +19,7 @@ const Contact = () => {
             <br/>
             <div className="flex flex-row h-1/2 justify-center gap-4">
               <CardFigure title="Github" taille="flex w-2/5 h-3/5  card shadow-xl" contenu={<></>} button={<a href="https://github.com/maximepoujol1-dot" target="_blank" rel="noreferrer" className="btn btn-primary">Voir</a>} theScale = {1.1} theY = {-2} />
-              <CardFigure title="Instagram" taille="flex w-2/5 h-3/5 card shadow-xl" contenu={<></>} button={<a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="btn btn-primary">Voir</a>} theScale = {1.1} theY = {-2} />
+              <CardFigure title="Instagram" taille="flex w-2/5 h-3/5 card shadow-xl" contenu={<></>} button={<a href="https://www.instagram.com/maxime_p28/" target="_blank" rel="noreferrer" className="btn btn-primary">Voir</a>} theScale = {1.1} theY = {-2} />
             </div>
             <br/>
           </div>

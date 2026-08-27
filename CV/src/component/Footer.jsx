@@ -14,7 +14,7 @@ const Footer = () => {
         <nav>
             <h6 className="footer-title">Document</h6>
             <a href="" className="link link-hover">CV</a>
-            <a href="" className="link link-hover">Portfolio</a>
+            <a href="" className="link link-hover">Conditions générales</a>
             <a href="" className="link link-hover">mentions légales</a>
             <a href="" className="link link-hover">confidentialités</a>
         </nav>
