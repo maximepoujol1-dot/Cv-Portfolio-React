@@ -1,1 +1,1 @@
-export const maintheme = "light"
+export const mainTheme = "light"

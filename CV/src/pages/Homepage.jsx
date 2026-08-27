@@ -1,7 +1,6 @@
 import React from 'react'
 import Footer from '../component/Footer'
 import Navbar from '../component/Navbar'
-import Hero from '../component/Hero'
 import Card from '../component/Card'
 import moi from '../assets/moi.png'
 import { Link } from 'react-router-dom'
