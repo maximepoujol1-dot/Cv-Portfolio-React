@@ -45,7 +45,7 @@ export const projetsList = [
     title: "Projet 2",
     contenu: <p>J'ai fait un projet cool</p>,
     taille: "flex w-1/3 h-2/3 bg-base-100 card shadow-xl",
-    year: "2025",
+    year: "2024",
     modal: true,
     contenuModal: <ul className="menu menu-vertical px-1">
             <li><img src= {img1} className="w-full" /></li>

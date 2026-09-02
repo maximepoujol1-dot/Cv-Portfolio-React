@@ -12,10 +12,8 @@ const Portfolio = () => {
     <div className="flex flex-col min-h-screen bg-base-200">
       <Navbar/>
       <br/>
-      <main className="flex-1">
-        <div initial={{opacity: 0, x: 500}} 
-                    animate={{opacity: 1, x: 0}} 
-                    transition={{duration: 0.8, ease: "easeIn"}}>
+
+        <div >
           <Carousel/>
           <br/>    
           <Card taille= "w-full bg-base-100 card shadow-xl" 
@@ -27,7 +25,7 @@ const Portfolio = () => {
                 
           
         </div>
-      </main>
+
       <br/>
       <Footer/>    
     </div>
