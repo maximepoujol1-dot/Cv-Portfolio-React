@@ -3,7 +3,7 @@ import pp from "../assets/Rond_rouge.png"
 import { Link } from 'react-router-dom'
 
 
-    //                <img src={pp} alt="Profile"  className="h-full w-full object-cover"/>
+    //                
 const Navbar = () => {
     
     return (
@@ -12,6 +12,7 @@ const Navbar = () => {
         <div className="flex min-w-0 flex-1 items-center gap-4">
             <div className="avatar shrink-0">
                 <div className="h-10 w-10 overflow-hidden rounded-full">
+                    <img src={pp} alt="Profile"  className="h-full w-full object-cover"/>
                 </div>
             </div>
             <a className="truncate text-xl">MAXIME COLLETTE POUJOL</a>
