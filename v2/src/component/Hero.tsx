@@ -1,8 +1,12 @@
 import React from 'react'
 
+interface heroProps {
+
+}
+
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <></>
   )
 }
 

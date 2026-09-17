@@ -5,6 +5,7 @@ import PortfolioPage from "./view/PortfolioPage"
 import CvPage from "./view/CvPage"
 import ContactPage from "./view/ContactPage"
 import Navbar from "./component/Navbar"
+import Footer from "./component/Footer"
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/Contact" element={<ContactPage/>}/>
         <Route path="*" element={<NotFoundPage/>}/>
       </Routes>
+      <Footer/>
     </>
   )
 }

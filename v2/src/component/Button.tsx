@@ -1,8 +1,16 @@
-import React from 'react'
+interface ButtonProps {
+  style: string
+  click: ()=> void
+  children: React.ReactNode
+}
 
-const Button = () => {
+const Button = ({children,style,click}:ButtonProps) => {
   return (
-    <div>Button</div>
+    <>
+      <button className={"btn "+style} onClick={() => click} type="button">
+        {children}
+      </button>
+    </>
   )
 }
 
