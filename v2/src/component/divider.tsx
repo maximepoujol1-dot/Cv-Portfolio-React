@@ -3,7 +3,6 @@ import React from 'react'
 export interface insideDividerProps {
   id: number
   name:string
-  elt : React.ReactNode
   image?: string
 }
 
@@ -13,9 +12,9 @@ interface DividerProps {
 }
 
 const Divider = ({ inside, horizontale}:DividerProps) => {
-  let sens = ""
+  let sens = "grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4"
   if (horizontale) {
-    sens = "flex flex-wrap gap-4"
+    sens = "flex flex-wrap items-center gap-4"
   }
   
   return (
@@ -23,10 +22,10 @@ const Divider = ({ inside, horizontale}:DividerProps) => {
       {inside.map((element) => (
         <>
         <div key={element.id} className="card bg-base-300 rounded-box grid h-20 grow place-items-center">
-          <figure>
-            {element.elt}
+          <figure className="m-0 flex h-8 w-8 items-center justify-center">
+            {element.image}
           </figure>
-          {element.name}
+          <span className="text-sm font-medium">{element.name}</span>
         </div>
         {element.id != inside.length ? (
         <div className="divider divider-horizontal"></div>) : null}

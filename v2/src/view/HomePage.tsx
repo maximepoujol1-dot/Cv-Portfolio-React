@@ -16,9 +16,10 @@ const HomePage = () => {
             
           </Hero>
           <div  className= "flex justify-center gap-2">
-                          <Link to="/portfolio" className="btn btn-primary">Mes projets</Link>
-                          <Link to="/cv" className="btn btn-primary">Me connaitre</Link>
-                          <Link to="/contact" className="btn btn-primary">Me contacter</Link>
+                          <Card style={"bg-base-100 w-1/2 h-4/4 shadow-xl"} title={"Mes projets"} modal={false} ><Link to="/portfolio" className="btn btn-primary">Voir</Link></Card>
+                          <Card style={"bg-base-100 w-1/2 h-3/4 shadow-xl"} title={"Me connaitre"} modal={false} ><Link to="/cv" className="btn btn-primary">Voir</Link></Card>
+                          <Card style={"bg-base-100 w-1/2 h-3/4 shadow-xl"} title={"Me contacter"} modal={false} ><Link to="/contact" className="btn btn-primary">Voir</Link></Card>
+
                 </div>
         </Card>  
     </div>
