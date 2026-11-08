@@ -1,14 +1,8 @@
-import React, { type ReactNode } from 'react'
-
-export interface insideDividerProps {
-  id: number
-  name:string
-  image?: string
-  logo?: ReactNode
-}
+import React from 'react'
+import type { insideDivider } from '../utility/type'
 
 interface DividerProps {
-  inside: Array<insideDividerProps>
+  inside: Array<insideDivider>
   horizontale : boolean
 }
 

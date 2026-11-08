@@ -1,30 +1,36 @@
-import Card from '../component/Card'
-import Hero from '../component/Hero'
 import { Link } from 'react-router-dom'
-import { useTranslation } from '../../node_modules/react-i18next'
-import img1 from "../assets/test2.png";
-import pp from "../assets/Rond_rouge.png"
+import { useTranslation } from 'react-i18next'
+
+import { FaExclamationTriangle } from "react-icons/fa";
+import CardFigure from '../component/CardFigure';
+import { linkClass } from '../utility/constants'
 
 const NotFoundPage = () => {
   const { t } = useTranslation()
   return (
-    <div className='flex items-center justify-center h-screen bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(${img1})` }}>
-        <Card style={"bg-base-100 w-1/2 h-3/4 shadow-xl"} title={""} modal={false}>
-          <Hero title={t("notFound.title")} image={pp} style={""} titleStyle={''} date={''}>
-            <p className="py-6" style={{ fontSize: '15px' }}>
-              {t("notFound.message")}
-            </p>  
-            
-          </Hero>
-          <div  className= "flex justify-center gap-2">
-                          <Card style={"bg-base-100 w-1/2 h-4/4 shadow-xl"} title={t("notFound.projects")} modal={false} ><Link to="/portfolio" className="btn btn-primary">{t("common.view")}</Link></Card>
-                          <Card style={"bg-base-100 w-1/2 h-3/4 shadow-xl"} title={t("notFound.learnMore")} modal={false} ><Link to="/cv" className="btn btn-primary">{t("common.view")}</Link></Card>
-                          <Card style={"bg-base-100 w-1/2 h-3/4 shadow-xl"} title={t("notFound.contact")} modal={false} ><Link to="/contact" className="btn btn-primary">{t("common.view")}</Link></Card>
+  <div className="flex min-h-[calc(100dvh-4rem)] items-center justify-center px-6 py-16">
+    <div className="w-full max-w-md">
+      <CardFigure
+        title="404"
+        style="card w-full bg-base-100 text-center shadow-xl shadow-black/40 p-6"
+        icon={<FaExclamationTriangle aria-hidden="true" className="h-16 w-16 text-warning" />}
+        modal={false}
+      >
+        <h2 className="mt-2 text-lg font-semibold">
+          {t('notFound.title')}
+        </h2>
 
-                </div>
-        </Card>
+        <p className="mt-3 text-sm leading-relaxed text-gray-500">
+          {t('notFound.message')}
+        </p>
+
+        <div className="mt-6 flex justify-center">
+          <Link to="/" className={linkClass}>{t('notFound.homeButton')}</Link>
         </div>
-  )
+      </CardFigure>
+    </div>
+  </div>
+)
 }
 
 export default NotFoundPage

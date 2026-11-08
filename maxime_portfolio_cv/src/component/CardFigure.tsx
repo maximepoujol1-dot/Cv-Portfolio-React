@@ -12,7 +12,7 @@ interface CardFigureProps {
 
 const CardFigure = ({ style = '', title, icon, modal, children, modalChildren }: CardFigureProps) => {
   return (
-    <div className="card flex w-full flex-1 flex-col bg-base-100 shadow-sm">
+    <div className="card flex w-full flex-1 flex-col bg-base-100 shadow-sm shadow-black/40">
       <figure className="flex h-40 shrink-0 items-center justify-center bg-base-200">
         {icon}
       </figure>

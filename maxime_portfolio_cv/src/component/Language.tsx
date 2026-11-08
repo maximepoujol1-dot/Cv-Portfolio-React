@@ -1,13 +1,17 @@
-import { useTranslation } from "../../node_modules/react-i18next";
+import { useTranslation } from "react-i18next";
 
-const Language = () => {
+interface LanguageProps {
+  className?: string
+}
+
+const Language = ({ className = "" }: LanguageProps) => {
     const { i18n, t } = useTranslation();
-    const currentLanguage = i18n.resolvedLanguage ?? i18n.language;
+    const currentLanguage = i18n.resolvedLanguage ?? i18n.language ?? "fr";
     const nextLanguage = currentLanguage.startsWith("fr") ? "en" : "fr";
-
+    
   return (
     <div>
-      <button aria-label={t("common.switchLanguage", { language: nextLanguage.toUpperCase() })} onClick={() => i18n.changeLanguage(nextLanguage)}>
+      <button className={className} aria-label={t("common.switchLanguage", { language: nextLanguage.toUpperCase() })} onClick={() => i18n.changeLanguage(nextLanguage)}>
         {nextLanguage.toUpperCase()}
       </button>
     </div>

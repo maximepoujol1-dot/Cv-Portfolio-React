@@ -2,7 +2,7 @@
 import Card from '../component/Card'
 import Divider from '../component/divider'
 import Hero from '../component/Hero';
-import { useTranslation } from '../../node_modules/react-i18next';
+import { useTranslation } from 'react-i18next';
 import {
   SiPython,
   SiGo,
@@ -104,7 +104,6 @@ const formation = [
 const CvPage = () => {
   const { t } = useTranslation();
   return (
-    <main className="flex-1">
       <div className="w-[90%] mx-auto">
         <br />
         <div>
@@ -119,7 +118,7 @@ const CvPage = () => {
         <br />
         <div className="space-y-4">
           <h1 className="text-3xl font-bold md:text-4xl">{t('cv.education')}</h1>
-          <Card style="w-full bg-base-100 card-xl shadow-xl p-6" title="" titleClassName="text-3xl font-bold" modal={false}>
+          <Card style="w-full bg-base-100 card-xl shadow-xl shadow-black/40 p-6" title="" titleClassName="text-3xl font-bold" modal={false}>
           {formation.map((item) => (
               <Hero key={item.id} title={t(item.name)} image={""} date={item.date.startsWith('cv.') ? t(item.date) : item.date} style="bg-transparent shadow-none" titleStyle={'text-4xl mb-1 font-bold'} >
                 <p>{t(item.message)}</p>
@@ -131,7 +130,7 @@ const CvPage = () => {
         <br />
           <div className="space-y-4">
             <h1 className="text-3xl font-bold md:text-4xl">{t('cv.experience')}</h1>
-            <Card style="w-full bg-base-100 card-xl shadow-xl p-6" title="" titleClassName="text-3xl font-bold" modal={false}>
+            <Card style="w-full bg-base-100 card-xl shadow-xl shadow-black/40 p-6" title="" titleClassName="text-3xl font-bold" modal={false}>
             {Experience.map((item) => (
               <Hero
                 key={item.id}
@@ -150,7 +149,7 @@ const CvPage = () => {
 
         <br />
         <h1 className="text-3xl font-bold md:text-4xl">{t('cv.skillsTable')}</h1>
-        <Card style="w-full bg-base-100 card-xl shadow-xl p-6" title="" titleClassName="text-3xl font-bold" modal={false}>
+        <Card style="w-full bg-base-100 card-xl shadow-xl shadow-black/40 p-6" title="" titleClassName="text-3xl font-bold" modal={false}>
           <br />
           <div>
             <div>
@@ -179,14 +178,13 @@ const CvPage = () => {
 
         <br />
         <h1 className="text-3xl font-bold md:text-4xl">{t('cv.hobbies')}</h1>
-        <Card style="w-full bg-base-100 card-xl shadow-xl p-6" title="" titleClassName="text-3xl font-bold" modal={false}>
+        <Card style="w-full bg-base-100 card-xl shadow-xl shadow-black/40 p-6" title="" titleClassName="text-3xl font-bold" modal={false}>
           <br />
           <Divider inside={hobbies.map((item) => ({ ...item, name: t(item.name) }))} horizontale={false} />
           <br />
         </Card>
         <br />
       </div>
-    </main>
   )
 }
 

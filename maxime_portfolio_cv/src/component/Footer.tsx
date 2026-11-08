@@ -1,10 +1,11 @@
-import { useTranslation } from '../../node_modules/react-i18next';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom'
+import Modal from './Modal';
 
 const Footer = () => {
     const { t } = useTranslation();
      return (
-    <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10"> 
+    <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10 shadow-[0_-2px_8px_rgb(0_0_0_/_0.25)]"> 
         <nav>
             <h6 className="footer-title">{t("footer.links")}</h6>
             <a href="https://github.com/maximepoujol1-dot" className="link link-hover">{t("contactPage.github")}</a>
@@ -12,9 +13,21 @@ const Footer = () => {
         </nav>
         <nav>
             <h6 className="footer-title">{t("footer.legal")}</h6>
-            <Link to="/Legal" className="link link-hover">{t("footer.terms")}</Link>
-            <Link to="/Legal" className="link link-hover">{t("footer.legalNotice")}</Link>
-            <Link to="/Legal" className="link link-hover">{t("footer.privacy")}</Link>
+            <Modal triggerLabel={t("footer.terms")}>
+                <h3 className="text-lg font-bold">{t("footer.terms")}</h3>
+                <p className="">element a dire</p>  
+                <p className="py-4">Press ESC key or click outside to close</p>
+            </Modal>
+            <Modal triggerLabel={t("footer.legalNotice")}>
+                <h3 className="text-lg font-bold">{t("footer.legalNotice")}</h3>
+                <p className="">element a dire</p>  
+                <p className="py-4">Press ESC key or click outside to close</p>
+            </Modal>
+            <Modal triggerLabel={t("footer.privacy")}>
+                <h3 className="text-lg font-bold">{t("footer.privacy")}</h3>
+                <p className="">element a dire</p>  
+                <p className="py-4">Press ESC key or click outside to close</p>                
+            </Modal>
         </nav>
         <nav>
             <h6 className="footer-title">{t("footer.navigation")}</h6>

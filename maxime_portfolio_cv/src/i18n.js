@@ -1,7 +1,9 @@
 import i18n from "i18next";
-import { initReactI18next } from "../node_modules/react-i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 i18n
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
@@ -27,6 +29,7 @@ i18n
           },
           home: {
             title: "Qui suis-je ?",
+            subtitle: "Étudiant en informatique",
             introduction:
               "Je suis Maxime Collette Poujol, étudiant en informatique et développeur junior. Curieux et motivé, j’aime apprendre de nouvelles technologies, développer des projets et résoudre des problèmes. Je souhaite aujourd’hui mettre mes compétences en pratique et continuer à progresser dans le domaine de l’informatique.",
             projects: "Mes projets",
@@ -34,11 +37,16 @@ i18n
             contact: "Me contacter",
           },
           portfolio: {
+            filterTime: "Par date",
+            filterType: "Par type",
+            github: "Voir sur GitHub",
             personalPortfolio: "Portfolio personnel",
             personalPortfolioDescription:
               "Création d’un portfolio responsive pour présenter mon parcours, mes compétences et mes réalisations avec React et TypeScript.",
             taskManager: "Gestionnaire de tâches",
             testProject: "Projet test",
+            testProjectDescription:
+              "Projet de démonstration pour vérifier l’affichage et le classement des cartes.",
             taskManagerDescription:
               "Application de démonstration pour organiser des tâches, suivre leur avancement et les classer par priorité.",
             videoGame: "Jeu vidéo 2D",
@@ -91,12 +99,9 @@ i18n
               "Vous pouvez consulter mon compte Instagram professionnel ici.",
           },
           notFound: {
-            title: "Erreur : 404",
-            message:
-              "Vous vous êtes égaré. Essayez de rejoindre l’une des pages suivantes.",
-            projects: "Mes projets",
-            learnMore: "Me connaître",
-            contact: "Me contacter",
+            title: "Page introuvable",
+            message: "La page que vous cherchez n’existe pas ou a été déplacée.",
+            homeButton: "Revenir à l’accueil",
           },
           footer: {
             links: "Liens",
@@ -134,6 +139,7 @@ i18n
           },
           home: {
             title: "Who am I?",
+            subtitle: "Computer science student",
             introduction:
               "I’m Maxime Collette Poujol, a computer science student and junior developer. Curious and motivated, I enjoy learning new technologies, building projects, and solving problems. I’m now looking to put my skills into practice and continue growing in the field of computer science.",
             projects: "My projects",
@@ -141,11 +147,16 @@ i18n
             contact: "Contact me",
           },
           portfolio: {
+            filterTime: "By date",
+            filterType: "By type",
+            github: "View on GitHub",
             personalPortfolio: "Personal portfolio",
             personalPortfolioDescription:
               "A responsive portfolio built with React and TypeScript to showcase my background, skills, and projects.",
             taskManager: "Task manager",
             testProject: "Test project",
+            testProjectDescription:
+              "Demo project to verify how cards are displayed and grouped.",
             taskManagerDescription:
               "A demo application for organizing tasks, tracking their progress, and sorting them by priority.",
             videoGame: "2D video game",
@@ -198,12 +209,9 @@ i18n
               "You can visit my professional Instagram account here.",
           },
           notFound: {
-            title: "Error: 404",
-            message:
-              "You seem to be lost. Try visiting one of the following pages.",
-            projects: "My projects",
-            learnMore: "About me",
-            contact: "Contact me",
+            title: "Page not found",
+            message: "The page you’re looking for doesn’t exist or has been moved.",
+            homeButton: "Back to home",
           },
           footer: {
             links: "Links",
@@ -220,9 +228,14 @@ i18n
         },
       },
     },
-    lng: "fr",          
     fallbackLng: "en",  
     interpolation: { escapeValue: false }, 
+    supportedLngs: ["fr", "en"],
+    detection: {
+      order: ["localStorage", "navigator"], 
+      caches: ["localStorage"],             
+      lookupLocalStorage: "language",       
+    },
   });
 
 export default i18n;

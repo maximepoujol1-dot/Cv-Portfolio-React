@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTranslation } from '../../node_modules/react-i18next'
+import { useTranslation } from 'react-i18next'
 
 interface heroProps {
  title: string
@@ -15,7 +15,7 @@ const Hero = ({title,image,style,titleStyle, date,children}:heroProps) => {
   return (
     <div className={"hero "+style}>
       <div className="hero-content flex-col lg:flex-row">
-        {image && <img alt={t("common.heroImage")} src={image} className="max-w-sm rounded-lg shadow-2xl"/> }
+        {image && <img alt={t("common.heroImage")} src={image} className="max-w-sm rounded-lg shadow-2xl shadow-black/40"/> }
         
         <div>
           <div className="flex justify-between items-center w-full">

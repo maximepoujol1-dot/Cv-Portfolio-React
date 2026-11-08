@@ -1,25 +1,29 @@
-import React from 'react'
-import { useTranslation } from '../../node_modules/react-i18next'
+import { useRef, type ReactNode } from 'react'
+import { linkClass } from '../utility/constants'
 
 interface ModalProps {
-  children: React.ReactNode
+  children: ReactNode
+  triggerLabel?: string
 }
 
-const Modal = ({children}:ModalProps) => {
-  const { t } = useTranslation()
+const Modal = ({ children, triggerLabel = 'open modal' }: ModalProps) => {
+  const dialogRef = useRef<HTMLDialogElement>(null)
+
   return (
     <>
-    <button className="btn" onClick={()=> (document.getElementById('my_modal_1') as HTMLDialogElement)?.showModal()}>{t("common.openModal")}</button>
-        <dialog id="my_modal_1" className="modal">
-            <div className="modal-box w-11/12 max-w-6xl ">
-                {children}
-                <div className="modal-action ">
-                <form method="dialog">
-                    <button className="btn">{t("common.close")}</button>
-                </form>
-                </div>
-            </div>
-        </dialog>
+      <button type="button" className={linkClass}onClick={() => dialogRef.current?.showModal()}>
+        {triggerLabel}
+      </button>
+      <dialog ref={dialogRef} className="modal">
+        <div className="modal-box">
+          {children}
+          <div className="modal-action">
+          <form method="dialog">
+            <button className="btn">Close</button>
+          </form>
+        </div>
+        </div>
+      </dialog>
     </>
   )
 }

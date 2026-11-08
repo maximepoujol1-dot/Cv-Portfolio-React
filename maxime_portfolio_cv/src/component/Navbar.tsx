@@ -1,42 +1,42 @@
 import { useEffect, useState, type ChangeEvent } from 'react'
 import { Link } from 'react-router-dom'
-import { useTranslation } from "../../node_modules/react-i18next";
+import { useTranslation } from "react-i18next";
 import Language from "./Language";
+import type { Theme } from '../utility/type'
+import { controlHoverClass, navbarLinkClass as linkClass } from '../utility/constants'
 
 
 const Navbar = () => {
- 
-  const { t } = useTranslation();
-
-    const [theme, setTheme] = useState<"light" | "dark">(() =>
+    const { t } = useTranslation();
+    const [theme, setTheme] = useState<Theme>(() =>
         localStorage.getItem("theme") === "dark" ? "dark" : "light"
     );
        
-        const handleToggle = (event: ChangeEvent<HTMLInputElement>) => {
-            setTheme(event.currentTarget.checked ? "dark" : "light");
+    const handleToggle = (event: ChangeEvent<HTMLInputElement>) => {
+        setTheme(event.currentTarget.checked ? "dark" : "light");
         }
        
-        useEffect(() => {
-            localStorage.setItem("theme", theme);
-            document.documentElement.setAttribute("data-theme", theme);
-        },[theme])
+    useEffect(() => {
+        localStorage.setItem("theme", theme);
+        document.documentElement.setAttribute("data-theme", theme);
+    },[theme])
 
 
     return (
-    <div className="navbar flex-wrap gap-4 bg-base-100 shadow-sm">
+    <div className="navbar sticky top-0 z-50 flex-wrap gap-4 bg-base-200 shadow-sm shadow-black/40">
         
         <div className="flex min-w-0 flex-1 items-center gap-4">
-            <Link to="/" className="truncate text-xl">MAXIME COLLETTE POUJOL</Link>
+            <Link to="/" className="truncate text-xl">COLLETTE-POUJOL MAXIME</Link>
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
-            <ul className="menu menu-horizontal px-1">
-            <li><Link to="/portfolio">{t("navigation.portfolio")} </Link></li>
-            <li><Link to="/cv">{t("navigation.cv")}</Link></li>
-            <li><Link to="/contact">{t("navigation.contact")}</Link></li>
-            <li><Language/></li>
+            <ul className="flex flex-wrap items-center justify-center gap-3 px-1">
+            <li><Link to="/portfolio" className={linkClass}>{t("navigation.portfolio")} </Link></li>
+            <li><Link to="/cv" className={linkClass}>{t("navigation.cv")}</Link></li>
+            <li><Link to="/contact" className={linkClass}>{t("navigation.contact")}</Link></li>
+            <li><Language className={controlHoverClass}/></li>
             <li>
-                <label className="swap swap-rotate">
+                <label className={`swap swap-rotate ${controlHoverClass}`}>
                     <input type="checkbox" onChange={handleToggle} checked={theme === "dark"}/>
 
                     <svg
