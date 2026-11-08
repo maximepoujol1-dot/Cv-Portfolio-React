@@ -39,7 +39,52 @@ i18n
           portfolio: {
             filterTime: "Par date",
             filterType: "Par type",
+            categories: {
+              web: "Web",
+              videoGame: "Jeu vidéo",
+              other: "Autre",
+            },
             github: "Voir sur GitHub",
+            role: "Rôle",
+            technology: "Technologies",
+            projects: {
+              portfolio: {
+                title: "Portfolio/CV | Maxime Collette Poujol",
+                date: "Novembre 2026",
+                message: "Site personnel permettant de présenter mon parcours, mon experience, mes différents projets et de me contacter.",
+                role: "Développeur",
+              },
+              ludotheque: {
+                title: "Ludothèque",
+                date: "Octobre 2026",
+                message: "Application de gestion de ludothèque permettant aux utilisateurs de se connecter, de gérer leur collection de jeux vidéo, ainsi que de noter et commenter leurs jeux.",
+                role: "Contributeur",
+              },
+              ydaysGame: {
+                title: "Ydays Game",
+                date: "Mai 2026",
+                message: "Jeu vidéo de plateforme 2D réalisé dans le cadre de mon cursus à Ynov. Il s'agit de ma première expérience dans le développement de jeux vidéo.",
+                role: "Contributeur",
+              },
+              vikingTracker: {
+                title: "Viking Tracker",
+                date: "Avril 2026",
+                message: "Projet web de gestion de données intégrant un système complet de création, consultation, modification et suppression. L'application a été déployée dans un environnement de production.",
+                role: "Développeur",
+              },
+              micromaniac: {
+                title: "Micromaniac",
+                date: "Décembre 2025",
+                message: "Projet de groupe consistant à développer un logiciel de gestion des ventes et des stocks pour un magasin de jeux vidéo. Ce projet avait pour objectif de mettre en pratique les principes de la programmation orientée objet.",
+                role: "Contributeur",
+              },
+              abyssFall: {
+                title: "Abyss Fall",
+                date: "Septembre 2025",
+                message: "Premier projet d'études supérieures : un jeu en ligne de commande dans lequel le joueur explore un donjon et affronte des ennemis au tour par tour. Le gameplay s'inspire des jeux vidéo de type RPG.",
+                role: "Contributeur",
+              },
+            },
             personalPortfolio: "Portfolio personnel",
             personalPortfolioDescription:
               "Création d’un portfolio responsive pour présenter mon parcours, mes compétences et mes réalisations avec React et TypeScript.",
@@ -149,7 +194,52 @@ i18n
           portfolio: {
             filterTime: "By date",
             filterType: "By type",
+            categories: {
+              web: "Web",
+              videoGame: "Video game",
+              other: "Other",
+            },
             github: "View on GitHub",
+            role: "Role",
+            technology: "Technologies",
+            projects: {
+              portfolio: {
+                title: "Portfolio/CV | Maxime Collette Poujol",
+                date: "November 2026",
+                message: "Personal website to showcase my background, experience, and various projects, and to provide a way to contact me.",
+                role: "Developer",
+              },
+              ludotheque: {
+                title: "Game Library",
+                date: "October 2026",
+                message: "Game library management application where users can sign in, manage their video game collection, and rate and review their games.",
+                role: "Contributor",
+              },
+              ydaysGame: {
+                title: "Ydays Game",
+                date: "May 2026",
+                message: "A 2D platform game created as part of my studies at Ynov. It was my first experience in video game development.",
+                role: "Contributor",
+              },
+              vikingTracker: {
+                title: "Viking Tracker",
+                date: "April 2026",
+                message: "Web-based data management project with full create, read, update, and delete functionality. The application was deployed to a production environment.",
+                role: "Developer",
+              },
+              micromaniac: {
+                title: "Micromaniac",
+                date: "December 2025",
+                message: "A group project to develop sales and inventory management software for a video game store, applying object-oriented programming principles.",
+                role: "Contributor",
+              },
+              abyssFall: {
+                title: "Abyss Fall",
+                date: "September 2025",
+                message: "My first higher-education project: a command-line game in which the player explores a dungeon and fights enemies in turn-based combat, inspired by RPGs.",
+                role: "Contributor",
+              },
+            },
             personalPortfolio: "Personal portfolio",
             personalPortfolioDescription:
               "A responsive portfolio built with React and TypeScript to showcase my background, skills, and projects.",

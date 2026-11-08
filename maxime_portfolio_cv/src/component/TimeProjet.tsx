@@ -26,7 +26,13 @@ const TimeProjet = ({ listeProjet }: ProjetProps) => {
           </div>
           <div className={`${index % 2 === 0 ? 'timeline-start md:text-end' : 'timeline-end md:text-start'} mb-10`}>
             <time className="font-mono italic">{item.date}</time>
-            <ProjectCard title={item.title} message={item.message} github={item.github} />
+            <ProjectCard
+              title={item.title}
+              message={item.message}
+              github={item.github}
+              role={item.role}
+              technology={item.technology}
+            />
           </div>
           <hr />
         </li>

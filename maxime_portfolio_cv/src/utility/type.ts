@@ -13,6 +13,8 @@ export interface projet {
   date: string
   message: string
   github?: string
+  role?:string
+  technology?:string[]
 }
 
 export interface insideDivider {
